@@ -1,0 +1,57 @@
+html{scroll-behavior:smooth}
+.page{will-change:opacity}
+img{content-visibility:auto}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;-webkit-tap-highlight-color:transparent}
+body{background:linear-gradient(180deg,#FFF8F0,#FDF2F8);color:#1E293B;min-height:100vh}
+header{background:rgba(26,10,18,.96);backdrop-filter:blur(10px);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.topBar{display:flex;align-items:center;gap:12px;padding:12px 14px;flex-wrap:wrap}
+.logoImg{width:58px;height:58px;min-width:58px;object-fit:contain;background:#fff;border-radius:50%;padding:4px;border:2px solid rgba(255,255,255,.8);box-shadow:0 3px 12px rgba(0,0,0,.2)}
+.logo{width:56px;height:56px;min-width:56px;background:rgba(212,160,23,.9);color:#fff;font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:2px solid rgba(255,255,255,.7)}
+.topBar h1{font-size:19px;letter-spacing:.5px}.topBar p{color:#FBBF24;font-weight:700;font-size:12px}
+.topRight{margin-left:auto;text-align:right}
+button{cursor:pointer;transition:all .2s ease;touch-action:manipulation}
+button:active{transform:scale(.97)}
+.cartBtn{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.45);backdrop-filter:blur(8px);padding:10px 16px;border-radius:25px;font-weight:800;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.cartBtn:hover{background:rgba(212,160,23,.85);border-color:#D4A017}
+nav{display:flex;flex-wrap:wrap;gap:8px;padding:12px;background:rgba(42,14,30,.95);backdrop-filter:blur(10px);overflow-x:auto}
+nav button{background:rgba(255,255,255,.08);color:#fff;border:1.2px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);padding:11px 15px;border-radius:25px;font-weight:700;font-size:12px;white-space:nowrap;box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
+nav button.active,nav button:hover{background:rgba(212,160,23,.9);border-color:rgba(255,255,255,.6);color:#fff;box-shadow:0 4px 14px rgba(212,160,23,.4)}
+main{max-width:1100px;margin:14px auto;padding:0 12px}
+.page{display:none}.page.active{display:block}
+.card{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:16px;border-radius:16px;box-shadow:0 4px 18px rgba(0,0,0,.06);margin-bottom:12px;border:1px solid rgba(255,255,255,.8);border-top:4px solid #D4A017}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+input,select,textarea{width:100%;padding:13px;border:1.5px solid rgba(203,213,225,.9);border-radius:12px;margin:6px 0;font-size:16px;background:rgba(255,255,255,.95)}
+input:focus,textarea:focus{outline:none;border-color:#D4A017;box-shadow:0 0 0 3px rgba(212,160,23,.2)}
+textarea{min-height:100px}
+.btnGold{background:rgba(212,160,23,.88);color:#fff;border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(8px);padding:13px 18px;border-radius:25px;font-weight:800;box-shadow:0 6px 16px rgba(212,160,23,.3);letter-spacing:.3px}
+.btnGold:hover{background:rgba(180,135,15,.95);transform:translateY(-1px)}
+.btnDark{background:rgba(26,10,18,.82);color:#fff;border:1.5px solid rgba(255,255,255,.4);backdrop-filter:blur(8px);padding:13px 18px;border-radius:25px;font-weight:800;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+.btnDark:hover{background:rgba(26,10,18,.95)}
+.btnLight{background:rgba(226,232,240,.65);color:#1E293B;border:1.5px solid rgba(255,255,255,.6);backdrop-filter:blur(8px);padding:11px 16px;border-radius:25px;font-weight:700;margin:4px;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.btnLight:hover{background:rgba(226,232,240,.95)}
+.btnGreen{background:rgba(22,101,52,.82);color:#fff;border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(8px);padding:11px 16px;border-radius:25px;font-weight:800;box-shadow:0 4px 12px rgba(22,101,52,.3)}
+.btnGreen:hover{background:rgba(22,101,52,.95)}
+.full{width:100%;margin-top:10px}
+table{width:100%;border-collapse:collapse;margin-top:10px;overflow-x:auto;display:block}
+th{background:#1A0A12;color:#fff;padding:10px;text-align:left;white-space:nowrap}td{padding:10px;border-bottom:1px solid #E2E8F0;white-space:nowrap}
+.advertWrap{width:100%;display:flex;justify-content:center;margin-bottom:12px}
+.advertBanner{position:relative;border-radius:18px;overflow:hidden;cursor:pointer;background:#000;width:100%;max-width:420px;height:540px;aspect-ratio:3/4;display:block;box-shadow:0 8px 28px rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.4)}
+.advertBanner img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.advertLabel{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.92));color:#fff;padding:30px 14px 14px}
+.advertLabel span{font-size:20px;font-weight:900;display:block}.advertLabel small{opacity:.9}
+.advertDots{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700;border:1px solid rgba(255,255,255,.35)}
+.bigImg{width:100%;height:320px;object-fit:cover;object-position:center;border-radius:14px;margin:10px 0;display:block}
+.founderImg{width:150px;height:180px;object-fit:cover;object-position:center top;display:block;margin:10px auto;border:3px solid #D4A017;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.colImg{width:100%;height:280px;object-fit:cover;object-position:center;border-radius:14px;cursor:pointer;background:#E2E8F0;display:block}
+.soldTag{position:absolute;top:10px;right:10px;background:rgba(220,38,38,.92);backdrop-filter:blur(6px);color:#fff;padding:6px 12px;border-radius:20px;font-weight:900;z-index:2;border:1px solid rgba(255,255,255,.5)}
+.priceTag{font-size:20px;font-weight:900;color:#D4A017}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);align-items:center;justify-content:center;z-index:99;padding:14px}.modalBox{background:rgba(255,255,255,.98);padding:18px;border-radius:18px;width:100%;max-width:520px;max-height:90vh;overflow:auto;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+footer{background:rgba(26,10,18,.96);color:#fff;text-align:center;padding:14px;margin-top:18px;font-size:13px}
+#fullImg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:200;align-items:center;justify-content:center;flex-direction:column;padding:10px}
+#fullImg img{width:100%;height:85vh;object-fit:contain;border-radius:10px;background:#000}
+#fullImg p{color:#fff;margin-top:10px;font-weight:700}
+.trackStep{padding:14px;border:1.5px solid rgba(226,232,240,.9);border-radius:14px;margin:8px 0;font-weight:800;display:flex;justify-content:space-between;background:rgba(255,255,255,.7)}
+.trackStep.done{background:rgba(220,252,231,.9);border-color:#16A34A;color:#166534}
+#toast{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(22,101,52,.92);backdrop-filter:blur(8px);color:#fff;padding:14px 20px;border-radius:25px;font-weight:800;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,.3);width:calc(100% - 40px);max-width:420px;text-align:center;border:1px solid rgba(255,255,255,.4)}
+@media(max-width:600px){.topBar h1{font-size:15px}.topBar p{font-size:11px}.logoImg{width:48px;height:48px}.logo{width:48px;height:48px}nav button{font-size:11px;padding:9px 12px}.advertBanner{max-width:100%;height:480px}.colImg{height:240px}.bigImg{height:200px}.founderImg{width:130px;height:160px}.grid3{grid-template-columns:1fr 1fr;gap:10px}.card{padding:12px}}
+@media(max-width:380px){.grid3{grid-template-columns:1fr}.topBar h1{font-size:14px}}

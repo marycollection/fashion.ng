@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>MARY'S COLLECTIONS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="topBar">
+<img src="mm1.jpg" alt="MARY'S COLLECTIONS Logo" class="logoImg" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex'">
+<div class="logo" id="logoFallback" style="display:none">MC</div>
+<div><h1>MARY'S COLLECTIONS</h1><p>Executive Fashion • Elegance • Class</p></div>
+<div class="topRight"><button class="cartBtn" onclick="openCart()">CART <span id="cartCount">0</span></button><br><small id="clock"></small></div>
+</div>
+<nav id="mainNav">
+<button data-page="home" class="active">HOME</button>
+<button data-page="about">ABOUT US</button>
+<button data-page="advertInfo">ADVERT PLACEMENT</button>
+<button data-page="collection">EXECUTIVES COLLECTION</button>
+<button data-page="track">TRACK ORDER</button>
+<button data-page="ceoLogin">CEO PORTAL</button>
+</nav>
+</header>
+<main>
+<section id="home" class="page active">
+<div class="advertWrap"><div id="advertBanner" class="advertBanner" onclick="clickAdvert()"><img id="advertImg" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&q=80" alt="Advert"><div class="advertDots">ADVERT • Tap To Open</div><div class="advertLabel"><span id="advertTitle">MARY'S COLLECTIONS - New Arrivals</span><small>Changes Every 30 Seconds • Portrait</small></div></div></div>
+<div class="card"><h2>NEW ARRIVALS - Latest Executive Collection</h2><p>Tap image for full screen. Tap BUY to order.</p><div id="homeCollection" class="grid3"><p>Loading...</p></div></div>
+<div class="card"><h2>Welcome To Mary's Collections</h2><p>Premium executive wears, gowns, suits, and fashion pieces made with love and class. Nationwide delivery in 3 days.</p><button class="btnGold" onclick="go('collection')">SHOP EXECUTIVE COLLECTION</button> <button class="btnDark" onclick="go('track')">TRACK YOUR ORDER</button></div>
+</section>
+<section id="about" class="page"><div class="card"><h2>ABOUT US</h2>
+<img src="m001.jpg" alt="Mary Emmanuel - Founder" class="bigImg founderImg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=800&q=80'">
+<h3>Our Founder - Mary Emmanuel</h3><p><b>Mary Emmanuel</b> is a Fashion Designer, Entrepreneur and CEO of Mary's Collections. Her mission: <i>Make every customer feel like a CEO.</i></p>
+<h3>Our Story</h3><p>MARY'S COLLECTIONS started as a small dream by <b>Mary Emmanuel</b>, a passionate Fashion Designer who believed every woman and man deserves to look executive, elegant and confident without breaking the bank.</p><p>What started with a single sewing machine, a few fabrics and a big vision has now grown into one of the most trusted fashion brands - known for quality, neat finishing, fast delivery and honest prices.</p><p>From beautiful gowns, to executive suits, to ready-to-wear collections, Mary personally supervises every piece.</p><p>She started as a Fashion Designer, sewing from a small shop, learning, growing, and building trust one customer at a time. Today, Mary's Collections delivers nationwide.</p><img class="bigImg" src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80" alt="Mary's Collections Fashion"><p><b>Contact:</b> Call 07030501498 | WhatsApp: 07030501498</p></div></section>
+<section id="advertInfo" class="page"><div class="card"><h2>ADVERT PLACEMENT</h2><p style="font-size:19px;line-height:1.8">For advert placement please call <b>07030501498</b> or WhatsApp us on <b>07030501498</b><br><br>Thank you for choosing Mary Collections.</p><a href="tel:07030501498"><button class="btnGold full">CALL 07030501498</button></a><a href="https://wa.me/2347030501498"><button class="btnDark full">WHATSAPP 07030501498</button></a></div></section>
+<section id="collection" class="page"><div class="card"><h2>EXECUTIVES COLLECTION</h2><p>Tap image for full screen. Tap BUY to add to cart.</p><input id="colSearch" placeholder="Search collection..." oninput="loadCollection()"></div><div id="collectionList" class="grid3"><p>Loading...</p></div></section>
+<section id="track" class="page"><div class="card"><h2>TRACK ORDER</h2><p>Enter your Tracking ID given after you ordered.</p><input id="trackId" placeholder="Tracking ID e.g MC123456"><button class="btnGold full" onclick="trackOrder()">TRACK</button><div id="trackResult"></div></div></section>
+<section id="ceoLogin" class="page">
+<div class="card" id="ceoStep1"><h2>CEO PORTAL - STEP 1</h2><p>Enter your NAME</p><input id="ceoName" placeholder="CEO NAME *"><button class="btnGold full" onclick="ceoStep1()">ENTER</button></div>
+<div class="card" id="ceoStep2" style="display:none"><h2>CEO PORTAL - STEP 2</h2><p>Welcome <b id="ceoNameShow"></b></p><input id="ceoCode" placeholder="VERIFY CODE - 00000000 *"><input id="ceoPass" type="password" placeholder="PASSWORD - password"><button class="btnGold full" onclick="ceoLogin()">VERIFY & ENTER</button></div>
+<div id="ceoDash"></div>
+</section>
+<section id="dynamic" class="page"><div id="dynamicBox"></div><button class="btnLight" onclick="goBack()">BACK</button></section>
+</main>
+<footer><p>© 2026 MARY'S COLLECTIONS - Mary Collctions | Call 07030501498 | WhatsApp 07030501498</p></footer>
+<div id="fullImg" onclick="closeFullImg()"><img id="fullImgTag" src="" alt="Full"><p>Tap Anywhere To Go Back</p></div>
+<div id="cartModal" class="modal"><div class="modalBox"><h3>YOUR CART</h3><div id="cartItems"></div><div id="cartTotal" style="font-size:20px;font-weight:900;margin:10px 0"></div><div class="card" style="background:#FFF7ED"><b>PAY TO:</b><br>ACCT Number: <b>1234567890</b><br>Bank: <b>Opay</b><br>Name: <b>Mary Emmanuel</b><br><small>Pay then fill Address & Phone below and Submit Order. Keep your Tracking ID.</small></div><input id="ordAddress" placeholder="Your Full Address *"><input id="ordPhone" placeholder="Your Phone Number *"><button class="btnGold full" onclick="submitOrder()">SUBMIT ORDER</button><button class="btnLight full" onclick="hideModals()">CLOSE</button></div></div>
+<div id="toast"></div>
+<script>
+if(typeof go === 'undefined'){
+  window.go = function(id, btn){
+    var pages=document.querySelectorAll(".page");
+    for(var i=0;i<pages.length;i++) pages[i].classList.remove("active");
+    var t=document.getElementById(id); if(t) t.classList.add("active");
+    var nb=document.querySelectorAll("#mainNav button");
+    for(var j=0;j<nb.length;j++) nb[j].classList.remove("active");
+    if(btn) btn.classList.add("active");
+    window.scrollTo(0,0);
+  };
+  window.goBack = function(){ window.go('home'); };
+}
+document.addEventListener("DOMContentLoaded", function(){
+  var nav=document.getElementById("mainNav");
+  if(nav){ nav.addEventListener("click", function(e){ var b=e.target.closest("button"); if(!b) return; var p=b.getAttribute("data-page"); if(p) window.go(p,b); }); }
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>
